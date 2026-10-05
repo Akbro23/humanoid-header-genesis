@@ -7,8 +7,7 @@ heads it into a goal 7 m away and lands without falling. Each CMA-ES
 generation of 512 candidate headers is simulated as one batched GPU scene.
 
 <p align="center">
-  <img src="docs/header_side.gif" alt="The H1-2 heading the cross toward the goal, side view" width="420">
-  <img src="docs/header_goal.gif" alt="The ball dropping through the target, seen from behind the goal" width="420">
+  <img src="docs/header.gif" alt="The H1-2 heading the cross into the goal, from behind the robot and from behind the goal" width="840">
 </p>
 <p align="center"><sub>Half speed. Left: from behind the robot. Right: from behind the goal, looking back through the target.</sub></p>
 
