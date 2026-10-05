@@ -9,7 +9,7 @@ generation of 512 candidate headers is simulated as one batched GPU scene.
 <p align="center">
   <img src="docs/header.gif" alt="The H1-2 heading the cross into the goal, from behind the robot and from behind the goal" width="840">
 </p>
-<p align="center"><sub>Half speed. Left: from behind the robot. Right: from behind the goal, looking back through the target.</sub></p>
+<p align="center"><sub>Played at 0.5× speed. Left: behind the robot. Right: behind the goal.</sub></p>
 
 The reference header in `trajectories/header.npy` meets the ball 1.54 s into
 the episode and sends it back at 7.6 m/s. The ball crosses the goal line
@@ -32,8 +32,8 @@ This replays the reference header and writes `out/header/`:
 | file | contents |
 | --- | --- |
 | `best.npy` | the 27 trajectory parameters |
-| `run.mp4` | view from behind the robot, at half speed |
-| `goal.mp4` | view from behind the goal, at half speed |
+| `run.mp4` | view from behind the robot, played at 0.5× speed |
+| `goal.mp4` | view from behind the goal, played at 0.5× speed |
 | `joints.png` | commanded vs measured angle and torque for each driven joint |
 
 The first run takes a few minutes longer while Genesis compiles its kernels.
