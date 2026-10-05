@@ -52,10 +52,10 @@ slightly.
 
 The two stages run in order:
 
-1. **`time` + `ball`, 10 generations at sigma 0.25.** This finds the contact
+1. `time` + `ball`, 10 generations at sigma 0.25. This finds the contact
    geometry and timing, head to ball, which is the hard part. What it
    returns usually falls over.
-2. **The full cost, the remaining generations at sigma 0.03,** restarted
+2. The full cost, the remaining generations at sigma 0.03, restarted
    around stage 1's best. This repairs the landing while keeping the header.
 
 Both step sizes matter. At a wider second step, the population drifts onto
@@ -77,7 +77,7 @@ home ─(wait)→ home → anticipation → stretch → jump → contact → ove
 The search sets five poses. Each pose is four joint angles (hip pitch, knee,
 ankle pitch, shoulder pitch), and the same angles go to both legs and both
 arms, so the motion stays in the sagittal plane. It also sets six durations
-between keyframes and a start delay, `T_wait`. That makes **27 parameters**.
+between keyframes and a start delay, `T_wait`. That makes 27 parameters.
 The other joints hold a standing pose.
 
 The search box is a margin of ±0.3 rad and ±0.05–0.1 s around the start
@@ -96,7 +96,7 @@ reaches the arrival point to within a fraction of a millimetre.
 
 ### The header
 
-The H1-2 has no head link: its head is the top of the torso mesh. A **header**
+The H1-2 has no head link: its head is the top of the torso mesh. A header
 is a ball contact on the torso link above the neck, measured in the torso's
 own frame. If anything else touches the ball first, such as the chest, an arm
 or the neck, the attempt counts as a miss.
