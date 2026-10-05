@@ -1,9 +1,11 @@
 # humanoid-header-genesis
 
-Keyframe trajectory optimization for a **jumping header** on the **Unitree
-H1-2**, simulated in [Genesis](https://github.com/Genesis-Embodied-AI/Genesis)
-and searched with CMA-ES. A cross comes in from in front, and the robot jumps,
-heads it into a goal 7 m away and lands without falling. Each CMA-ES
+Keyframe trajectory optimization for a jumping header on the Unitree
+H1-2, simulated in [Genesis](https://github.com/Genesis-Embodied-AI/Genesis)
+and searched with CMA-ES. A cross (a ball kicked toward the robot) comes in
+from 5 m in front, and the robot jumps and heads it back into a full-size goal
+7 m away. It aims for a 0.6 m target square in the middle of the goal, with its
+centre 1.0 m off the ground, and then has to land without falling. Each CMA-ES
 generation of 512 candidate headers is simulated as one batched GPU scene.
 
 <p align="center">
@@ -13,10 +15,9 @@ generation of 512 candidate headers is simulated as one batched GPU scene.
 
 The reference header in `trajectories/header.npy` meets the ball 1.54 s into
 the episode and sends it back at 7.6 m/s. The ball crosses the goal line
-0.92 m high and 0.12 m off centre, inside the target square and 0.15 m from its
-centre. The robot lands at 5.7 body weights and stays upright for the full 6 s
-episode. Finding it from the hand-written seed takes about 23 minutes on an
-RTX 2060.
+0.92 m high and 0.12 m to the side of centre, inside the target square. The
+robot lands and stays upright for the full 6 s episode. Finding it from the
+hand-written seed takes about 23 minutes on an RTX 2060.
 
 ## Quick start
 
